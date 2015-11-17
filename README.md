@@ -21,5 +21,5 @@ Download the *skyFiction.jar* file that in time will be located in the *dist* fo
 ## License
 
 This project is licensed under the second version of the Apache license.
-More information about this license cna be found here:
+More information about this license can be found here:
 http://www.apache.org/licenses/LICENSE-2.0
