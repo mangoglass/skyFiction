@@ -49,4 +49,19 @@ public class SkyFiction extends StateBasedGame {
         throw new UnsupportedOperationException("Not supported yet.");
     }
     
+    /**
+     * Returns the pseudo width of the window that the game elements will be using as render positions.
+     * @return Integer representing the width.
+     */
+    public static int getWidth() {
+        return width;
+    }
+    /**
+     * Returns the pseudo height of the window that the game elements will be using as render positions.
+     * @return Integer representing the height.
+     */
+    public static int getHeight() {
+        return height;
+    }
+    
 }
