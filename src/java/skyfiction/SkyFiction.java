@@ -9,6 +9,7 @@ import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
+import org.newdawn.slick.ScalableGame;
 
 
 /**
@@ -22,8 +23,8 @@ public class SkyFiction extends StateBasedGame {
 
 
 
-    private static final int width = 1920;       // The games pseudo width
-    private static final int height = 1080;      // The games pseudo height
+    private static final int pseudoWidth = 1920;       // The games pseudo width
+    private static final int pseudoHeight = 1080;      // The games pseudo height
 
     public static AppGameContainer app;
     public static AppGameContainer scalable;    // To make a scalable window
@@ -39,8 +40,9 @@ public class SkyFiction extends StateBasedGame {
      * @param args the command line arguments
      */
     public static void main(String[] args)
-    {
+            throws SlickException {
         skyFiction = new SkyFiction("SkyFiction");
+        app = new AppGameContainer(new ScalableGame(skyFiction, pseudoWidth, pseudoHeight, false));
     }
 
     /**
@@ -50,6 +52,9 @@ public class SkyFiction extends StateBasedGame {
     public SkyFiction(String name)
     {
         super(name);
+        this.addState(new SplashState(SPLASH));
+        this.addState(new MenuState(MENU));
+        this.addState(new GameState(GAME));
     }
 
     @Override
@@ -59,20 +64,19 @@ public class SkyFiction extends StateBasedGame {
     }
     
     /**
-     * Returns the pseudo width of the window that the game elements will be using as render positions.
-     * @return Integer representing the width.
+     * Returns the pseudo Width of the window that the game elements will be using as render positions.
+     * @return Integer representing the pseudo width.
      */
-    public static int getWidth()
+    public static int getPseudoWidth()
     {
-        return width;
+        return pseudoWidth;
     }
     /**
-     * Returns the pseudo height of the window that the game elements will be using as render positions.
+     * Returns the pseudo pseudoHeight of the window that the game elements will be using as render positions.
      * @return Integer representing the height.
      */
-    public static int getHeight()
+    public static int getPseudoHeight()
     {
-        return height;
+        return pseudoHeight;
     }
-    
 }
