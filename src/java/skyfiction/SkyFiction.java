@@ -1,9 +1,10 @@
+
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This project is licensed under the second version of the Apache license.
+ * More information about this license can be found here: http://www.apache.org/licenses/LICENSE-2.0
  */
-package skyfiction;
+
+package java.skyfiction;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
